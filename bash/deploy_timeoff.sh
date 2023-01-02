@@ -1,6 +1,6 @@
  #!/bin/bash
 
-aws s3 cp . s3://luis-pem-files/Operations-Luis.pem
+aws s3 cp s3://luis-pem-files/Operations-Luis.pem .
 chmod 600 Operations-Luis.pem
 
 for ip in $(aws ec2 describe-instances --filter Name=tag:Name,Values=timeoff  --query "Reservations[*].Instances[*].PrivateIpAddress" --output=text --region us-east-1) ; 
