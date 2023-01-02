@@ -9,7 +9,7 @@ pipeline {
          stage("Clone timeoff repo") {
             steps {
                 script {
-                    sh 'aws ec2 describe-security-groups'           
+                    sh 'aws ec2 describe-security-groups --region us-east-1'           
                 }
             }
         }
