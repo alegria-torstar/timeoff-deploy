@@ -11,5 +11,5 @@ cd timeoff-managemenet
 npm install 
 npm run-script db-update
 npm start
-EOF;
+EOF
 done
