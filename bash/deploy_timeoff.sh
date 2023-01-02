@@ -7,7 +7,7 @@ for ip in $(aws ec2 describe-instances --filter Name=tag:Name,Values=timeoff  --
     do 
     ssh -tt -o StrictHostKeyChecking=no -i Operations-Luis.pem ec2-user@${ip} << EOF
 git clone https://github.com/timeoff-management/timeoff-management-application.git timeoff-management
-cd timeoff-managemenet
+cd timeoff-management
 npm install 
 npm run-script db-update
 npm start
