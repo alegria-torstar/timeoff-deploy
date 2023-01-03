@@ -7,3 +7,5 @@ For deploying the application, I created a job that is polling any change in the
 Every five minutes the job checks if the branch suffered from any modification and in the end it triggers a job that gets every instance inside the asg, ssh's into each one and runs the necessary commands to update the application. 
 
 <img width="1052" alt="Screen Shot 2023-01-02 at 20 44 05" src="https://user-images.githubusercontent.com/111317556/210294463-c6c75f2b-1c3b-4c30-81bf-33a33d948aff.png">
+
+The best approach would be using CodeDeploy in order to replace every old node with a new one with the desired version.
